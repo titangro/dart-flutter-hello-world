@@ -45,11 +45,18 @@ class _RandomWordsState extends State<RandomWords> {
           ).toList();
 
           return Scaffold(
-            appBar: AppBar(
-              title: Text('Saved Suggetions'),
-            ),
-            body: ListView(children: divided),
-          );
+              appBar: AppBar(
+                title: Text('Saved Suggetions'),
+              ),
+              body: ListView(
+                children: [
+                  ...divided,
+                  RaisedButton(
+                    child: Text('Raised Button!!!'),
+                    onPressed: () => {Navigator.pop(context)},
+                  )
+                ],
+              ));
         },
       ),
     );
